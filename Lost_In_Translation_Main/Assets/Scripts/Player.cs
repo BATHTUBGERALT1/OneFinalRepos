@@ -102,7 +102,7 @@ public class Player : MonoBehaviour
         if (gameOver == true)
         {
             //if game is over load game over
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene("Game Over");
 
         }
         else

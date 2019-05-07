@@ -2,9 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Checkpoint : MonoBehaviour {
 
     private GameMaster gm;
+    public int LastScore;
+
+
 
     private void Start()
     {
@@ -15,10 +19,16 @@ public class Checkpoint : MonoBehaviour {
     {
         if (other.CompareTag("Player"))
         {
+            LastScore = PlayerPrefs.GetInt("score", 0);
+
+            PlayerPrefs.SetInt("CheckScore", LastScore);
+            PlayerPrefs.Save();
+
             gm.lastCheckPointPos = transform.position;
+
 
         }
     }
 
-
+  
 }
