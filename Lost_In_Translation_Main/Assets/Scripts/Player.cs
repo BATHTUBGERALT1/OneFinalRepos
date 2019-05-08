@@ -28,14 +28,23 @@ public class Player : MonoBehaviour
     private int extraJumps;
     public int extraJumpsValue;
 
-  
+    public int ScoreToSet;
 
+    private GameMaster gm;
 
+    public bool ifMadeCheckpoint = false;
+
+    private Scene currentLevel;
+
+    private int CheckPointSwitch = 0;
     //variable to reference to the lives display
     public LifeScript livesObject;
 
     private void Start()
     {
+        PlayerPrefs.SetInt("CheckPointHit", 0);
+        PlayerPrefs.Save();
+
         extraJumps = extraJumpsValue;
         rb = GetComponent<Rigidbody2D>();
 
@@ -43,6 +52,12 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
+
+        CheckPointSwitch = PlayerPrefs.GetInt("CheckPointHit", 0);
+        if (CheckPointSwitch == 1)
+        {
+            ifMadeCheckpoint = true;
+        }
 
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
 
@@ -107,16 +122,30 @@ public class Player : MonoBehaviour
         }
         else
         {
+
+            Scene currentLevel = SceneManager.GetActiveScene();
             // if it isnt game over...
             // reset to beginning 
+            if (ifMadeCheckpoint == false)
+            {
+
+                SceneManager.LoadScene(currentLevel.buildIndex);
+
+            }
+            else
+            {
+
+                //check current level
 
 
-            //check current level
-            Scene currentLevel = SceneManager.GetActiveScene();
 
-            //second tell unity to reload level
-            SceneManager.LoadScene(currentLevel.buildIndex);
+                ScoreToSet = PlayerPrefs.GetInt("CheckScore", 0);
+                PlayerPrefs.SetInt("score", ScoreToSet);
+                PlayerPrefs.Save();
 
+                gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
+                transform.position = gm.lastCheckPointPos;
+            }
         }
     }
 

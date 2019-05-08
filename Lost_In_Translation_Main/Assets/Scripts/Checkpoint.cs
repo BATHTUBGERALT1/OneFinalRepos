@@ -26,6 +26,8 @@ public class Checkpoint : MonoBehaviour {
 
             gm.lastCheckPointPos = transform.position;
 
+            PlayerPrefs.SetInt("CheckPointHit", 1);
+            PlayerPrefs.Save();
 
         }
     }
