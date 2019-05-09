@@ -6,13 +6,13 @@ using UnityEngine.UI;
 public class LifeScript : MonoBehaviour {
 
     public Text livesText;
-    private int numericalLives = 3;
+    private int numericalLives = 99999999;
 
 
     // Use this for initialization
     void Start()
     {
-        numericalLives = PlayerPrefs.GetInt("lives", 3);
+        numericalLives = PlayerPrefs.GetInt("lives", 99999999);
         livesText.text = numericalLives.ToString();
     }
 

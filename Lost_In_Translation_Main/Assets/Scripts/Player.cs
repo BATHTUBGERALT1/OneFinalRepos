@@ -58,6 +58,10 @@ public class Player : MonoBehaviour
         {
             ifMadeCheckpoint = true;
         }
+        else
+        {
+            ifMadeCheckpoint = false;
+        }
 
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
 
