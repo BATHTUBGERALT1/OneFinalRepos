@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerPos : MonoBehaviour {
     public int ScoreToSet;
+    
 
     private GameMaster gm;
     // Use this for initialization
