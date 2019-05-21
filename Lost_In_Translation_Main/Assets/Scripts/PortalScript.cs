@@ -4,7 +4,13 @@ using UnityEngine;
 // extra using statemet to allow us to use scene management functions
 using UnityEngine.SceneManagement;
 public class PortalScript : MonoBehaviour {
+
+    public Score scoreObject;
+
+  
+    private Player playerPosition;
     
+
     public string sceneToLoad;
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -17,11 +23,12 @@ public class PortalScript : MonoBehaviour {
         {
             // we DID hit the player !!!!!!
 
-            
 
+            scoreObject.SaveScore();
       
-            //goes to the high score screen
+        
             SceneManager.LoadScene(sceneToLoad);
+           
 
         }
 

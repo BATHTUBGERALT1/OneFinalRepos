@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 
 
 public class Player : MonoBehaviour
+
+  
 {
     public float speed;
     public float jumpForce;
@@ -18,7 +20,7 @@ public class Player : MonoBehaviour
 
     private bool facingRight = true;
 
-
+    private int player;
     private bool isGrounded;
     public Transform groundCheck;
     public float checkRadius;
@@ -42,6 +44,8 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
+        
+
         PlayerPrefs.SetInt("CheckPointHit", 0);
         PlayerPrefs.Save();
 
