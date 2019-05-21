@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     public Animator playerAnimator;
     public SpriteRenderer playerSprite;
 
+
     private Rigidbody2D rb;
 
     private bool facingRight = true;
@@ -44,7 +45,8 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        
+
+      
 
         PlayerPrefs.SetInt("CheckPointHit", 0);
         PlayerPrefs.Save();
