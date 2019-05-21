@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Boulder_Script : MonoBehaviour {
     private Vector3 StartingPosition;
+
+    private Animator myAnimator; 
+
     // Use this for initialization
     void Start () {
         StartingPosition = transform.position;
@@ -17,7 +20,13 @@ public class Boulder_Script : MonoBehaviour {
 	}
     public void ResetSelf()
     {
+        myAnimator = GetComponent<Animator>();
+        if (myAnimator != null){
+            myAnimator.Play("Boulder 1", -1, 0f);
+            myAnimator.Play("Boulder 2 (1)", -1, 0f);
+        }
         transform.position = StartingPosition;
     }
 
+    
 }

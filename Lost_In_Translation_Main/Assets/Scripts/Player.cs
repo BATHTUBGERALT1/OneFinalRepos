@@ -42,6 +42,8 @@ public class Player : MonoBehaviour
     private int CheckPointSwitch = 0;
     //variable to reference to the lives display
     public LifeScript livesObject;
+    public GameObject[] Boulders;
+    public GameObject[] InvWall;
 
     private void Start()
     {
@@ -146,6 +148,21 @@ public class Player : MonoBehaviour
             {
 
                 //check current level
+                Boulders = GameObject.FindGameObjectsWithTag("Other");
+
+                foreach (GameObject Boulder in Boulders)
+                {
+                    Boulder.GetComponent<Boulder_Script>().ResetSelf();
+                }
+
+
+                //check current level
+                InvWall = GameObject.FindGameObjectsWithTag("MovingInvWalls");
+
+                foreach (GameObject InvWall in InvWall)
+                {
+                    InvWall.GetComponent<InvWalls>().ResetSelf();
+                }
 
 
 
