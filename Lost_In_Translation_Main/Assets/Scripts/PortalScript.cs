@@ -22,7 +22,7 @@ public class PortalScript : MonoBehaviour {
     {
 
 
-        gm.lastCheckPointPos = new Vector3(-8.282f, -3.2f, 1f);
+        gm.lastCheckPointPos = new Vector3(-8.19f, 1.394f, 1f);
         //checks the playerscript has been collided with
         Player playerScript = collision.collider.GetComponent<Player>();
 
