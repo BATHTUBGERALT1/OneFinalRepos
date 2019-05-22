@@ -18,7 +18,7 @@ public class Highscores : MonoBehaviour {
         LoadHighScoreData();
 
         //looks to see if we got a new high score
-        int currentScore = PlayerPrefs.GetInt("score", 0); 
+        int currentScore = PlayerPrefs.GetInt("carryscore", 0); 
         bool haveNewHighScore = IsNewHighScore(currentScore);
         if (haveNewHighScore == true)
         {

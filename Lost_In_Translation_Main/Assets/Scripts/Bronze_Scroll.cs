@@ -42,7 +42,7 @@ public class Bronze_Scroll : MonoBehaviour {
 
 
 
-            Score.scoreValue += 25;
+            scoreObject.scoreValue += 25;
             // Destroy the gameObject that this script is attracted to
             // (the coin) 
 

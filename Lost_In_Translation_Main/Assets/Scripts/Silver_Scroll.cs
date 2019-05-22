@@ -41,9 +41,9 @@ public class Silver_Scroll : MonoBehaviour {
         if (playerScript)
         {
 
- 
 
-            Score.scoreValue += 50;
+
+            scoreObject.scoreValue += 50;
             // Destroy the gameObject that this script is attracted to
             // (the coin) 
 

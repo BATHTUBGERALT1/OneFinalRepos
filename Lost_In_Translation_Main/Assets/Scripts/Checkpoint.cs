@@ -8,17 +8,17 @@ public class Checkpoint : MonoBehaviour {
    
     private GameMaster gm;
     public int LastScore;
-  
 
 
-    private void Start()
+
+    public void Start()
     {
         gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
 
 
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {

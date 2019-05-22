@@ -43,12 +43,20 @@ public class Player : MonoBehaviour
     //variable to reference to the lives display
     public LifeScript livesObject;
     public GameObject[] Boulders;
-    public GameObject[] InvWall;
+    public GameObject[] InvWalls;
 
-    private void Start()
+    public int theLastScore;
+
+
+
+    public void Start()
     {
 
-      
+
+
+        ScoreToSet = PlayerPrefs.GetInt("CheckScore", 0);
+        PlayerPrefs.SetInt("score", ScoreToSet);
+        PlayerPrefs.Save();
 
         PlayerPrefs.SetInt("CheckPointHit", 0);
         PlayerPrefs.Save();
@@ -56,9 +64,11 @@ public class Player : MonoBehaviour
         extraJumps = extraJumpsValue;
         rb = GetComponent<Rigidbody2D>();
 
+
+
     }
 
-    private void FixedUpdate()
+    public void FixedUpdate()
     {
 
         CheckPointSwitch = PlayerPrefs.GetInt("CheckPointHit", 0);
@@ -96,7 +106,7 @@ public class Player : MonoBehaviour
 
     }
 
-    private void Update()
+    public void Update()
     {
         if(isGrounded == true)
         {
@@ -157,9 +167,9 @@ public class Player : MonoBehaviour
 
 
                 //check current level
-                InvWall = GameObject.FindGameObjectsWithTag("MovingInvWalls");
+                InvWalls = GameObject.FindGameObjectsWithTag("MovingInvWalls");
 
-                foreach (GameObject InvWall in InvWall)
+                foreach (GameObject InvWall in InvWalls)
                 {
                     InvWall.GetComponent<InvWalls>().ResetSelf();
                 }

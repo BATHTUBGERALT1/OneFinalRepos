@@ -5,20 +5,26 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class PortalScript : MonoBehaviour {
 
-    public Score scoreObject;
+    public GameObject scoreObject;
+
+    public Score saveScore;
 
     private GameMaster gm;
 
     private Player playerPosition;
-    
+
+    private int takeScore;
+  
+
 
     public string sceneToLoad;
 
-    private void Start()
+    public void Start()
     {
+        saveScore = scoreObject.GetComponent<Score>();
         gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void OnCollisionEnter2D(Collision2D collision)
     {
 
 
@@ -30,15 +36,17 @@ public class PortalScript : MonoBehaviour {
         if (playerScript != null)
         {
             // we DID hit the player !!!!!!
+            takeScore = saveScore.scoreValue;
+            PlayerPrefs.SetInt("carryscore", takeScore );
+            PlayerPrefs.Save();
+
+            saveScore.SaveScore();
 
 
-         
-      
-        
             SceneManager.LoadScene(sceneToLoad);
 
 
-            scoreObject.SaveScore();
+           
         }
 
     }

@@ -42,7 +42,7 @@ public class Gold_Scroll : MonoBehaviour {
 
 
 
-            Score.scoreValue += 100;
+            scoreObject.scoreValue += 100;
             // Destroy the gameObject that this script is attracted to
             // (the coin) 
 

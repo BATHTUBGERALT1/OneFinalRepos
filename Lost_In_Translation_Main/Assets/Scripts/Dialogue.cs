@@ -8,15 +8,24 @@ public class Dialogue : MonoBehaviour {
     public TextMeshProUGUI textDisplay;
     public string[] sentences;
     private int index;
-    public float typingSpeed; 
-   
+    public float typingSpeed;
 
 
+    public GameObject continueButton;
     void Start()
     {
 
         StartCoroutine(Type());
 
+    }
+
+    void Update()
+    {
+        if(textDisplay.text == sentences[index])
+        {
+            continueButton.SetActive(true);
+
+        }
     }
     IEnumerator Type()
     {
@@ -32,7 +41,9 @@ public class Dialogue : MonoBehaviour {
     }
     public void NextSentence()
     {
-        if(index < sentences.Length- 1)
+
+        continueButton.SetActive(false);
+        if(index < sentences.Length - 1)
         {
 
             index++;
@@ -44,13 +55,12 @@ public class Dialogue : MonoBehaviour {
         else
         {
             textDisplay.text = "";
+            continueButton.SetActive(false);
         }
 
 
     }
 	// Use this for initialization
 
-	void Update () {
-		
-	}
+
 }

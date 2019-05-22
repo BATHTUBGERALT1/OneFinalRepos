@@ -9,9 +9,8 @@ public class GoHomeScript : MonoBehaviour {
     public void GoHome()
     {
 
-        //this will load the 1st level
-        SceneManager.LoadScene("Main Menu");
-
+     
+        Application.Quit();
 
 
     }

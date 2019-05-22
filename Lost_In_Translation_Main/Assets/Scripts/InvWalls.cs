@@ -10,7 +10,7 @@ public class InvWalls : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        StartingPosition = transform.position;
+       
 
 
     }
@@ -29,7 +29,7 @@ public class InvWalls : MonoBehaviour {
             myAnimator.SetBool("MovingInvWalls", false);
 
         }
-        transform.position = StartingPosition;
+    
     }
 
 
