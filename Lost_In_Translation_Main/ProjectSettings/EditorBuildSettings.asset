@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TeleportationCutscene.unity
     guid: 7b30758be1944a648951f38f116fbb03
+  - enabled: 1
+    path: Assets/Scenes/HowToPlay.unity
+    guid: 76d802c0aad573448bca4c66b4e21021
   m_configObjects: {}

@@ -32,12 +32,13 @@ public class PortalScript : MonoBehaviour {
             // we DID hit the player !!!!!!
 
 
-            scoreObject.SaveScore();
+         
       
         
             SceneManager.LoadScene(sceneToLoad);
-           
 
+
+            scoreObject.SaveScore();
         }
 
     }
