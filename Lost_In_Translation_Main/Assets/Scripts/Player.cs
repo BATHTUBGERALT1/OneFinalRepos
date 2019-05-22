@@ -64,12 +64,12 @@ public class Player : MonoBehaviour
         extraJumps = extraJumpsValue;
         rb = GetComponent<Rigidbody2D>();
 
-        //InvWalls = GameObject.FindGameObjectsWithTag("MovingInvWalls");
-        //foreach (GameObject InvWall in InvWalls)
-        //{
-        //    Physics2D.IgnoreCollision(InvWall.GetComponent<Collider2D>(), GetComponent<Collider2D>());
-       
-        //}
+        InvWalls = GameObject.FindGameObjectsWithTag("MovingInvWalls");
+        foreach (GameObject InvWall in InvWalls)
+        {
+            Physics2D.IgnoreCollision(InvWall.GetComponent<Collider2D>(), GetComponent<Collider2D>());
+
+        }
 
     }
 
