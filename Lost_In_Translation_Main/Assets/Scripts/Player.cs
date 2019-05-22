@@ -64,9 +64,15 @@ public class Player : MonoBehaviour
         extraJumps = extraJumpsValue;
         rb = GetComponent<Rigidbody2D>();
 
-
+        //InvWalls = GameObject.FindGameObjectsWithTag("MovingInvWalls");
+        //foreach (GameObject InvWall in InvWalls)
+        //{
+        //    Physics2D.IgnoreCollision(InvWall.GetComponent<Collider2D>(), GetComponent<Collider2D>());
+       
+        //}
 
     }
+
 
     public void FixedUpdate()
     {
@@ -171,6 +177,7 @@ public class Player : MonoBehaviour
 
                 foreach (GameObject InvWall in InvWalls)
                 {
+                    Physics2D.IgnoreCollision(InvWall.GetComponent<Collider2D>(), GetComponent<Collider2D>());
                     InvWall.GetComponent<InvWalls>().ResetSelf();
                 }
 
