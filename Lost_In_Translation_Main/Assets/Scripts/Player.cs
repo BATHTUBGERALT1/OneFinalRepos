@@ -139,7 +139,7 @@ public class Player : MonoBehaviour
     {
         //takes away lives and saves the changes made
         livesObject.LoseLife();
-        livesObject.SaveLives();
+        //livesObject.SaveLives();
 
         Death.Play();
         //checks if its game over
