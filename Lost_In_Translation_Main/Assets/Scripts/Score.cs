@@ -7,6 +7,8 @@ public class Score : MonoBehaviour {
     //Sets the variable "ScoreValue" to an integer and sets base score to 0
     public int scoreValue = 0;
     Text score;
+
+    
     
 
     // Use this for initialization

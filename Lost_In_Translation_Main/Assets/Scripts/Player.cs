@@ -45,6 +45,9 @@ public class Player : MonoBehaviour
     public GameObject[] Boulders;
     public GameObject[] InvWalls;
 
+
+    public AudioSource Death;
+
     public int theLastScore;
 
 
@@ -138,6 +141,7 @@ public class Player : MonoBehaviour
         livesObject.LoseLife();
         livesObject.SaveLives();
 
+        Death.Play();
         //checks if its game over
         bool gameOver = livesObject.isGameOver();
 
