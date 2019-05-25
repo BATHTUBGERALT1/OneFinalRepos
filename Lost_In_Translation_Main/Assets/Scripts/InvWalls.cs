@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class InvWalls : MonoBehaviour {
+
+    //the position of the wall
     private Vector3 StartingPosition;
 
     private Animator myAnimator;
@@ -10,6 +12,7 @@ public class InvWalls : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+        //send it back to the start 
         StartingPosition = transform.position;
 
 
@@ -20,6 +23,8 @@ public class InvWalls : MonoBehaviour {
     {
 
     }
+
+    //when called it resets position on player death
     public void ResetSelf()
     {
         myAnimator = GetComponent<Animator>();

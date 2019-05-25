@@ -5,12 +5,15 @@ using TMPro;
 
 public class Dialogue : MonoBehaviour {
 
+    //text mesh pro variables 
     public TextMeshProUGUI textDisplay;
+
+    //actions of the text
     public string[] sentences;
     private int index;
     public float typingSpeed;
 
-
+    //this is for the continuing of the text, so it goes to each line
     public GameObject continueButton;
     void Start()
     {
@@ -18,7 +21,7 @@ public class Dialogue : MonoBehaviour {
         StartCoroutine(Type());
 
     }
-
+    //displays the sentences, and the continue button shows once sentence is done
     void Update()
     {
         if(textDisplay.text == sentences[index])
@@ -27,6 +30,8 @@ public class Dialogue : MonoBehaviour {
 
         }
     }
+
+    //this is for the speed and display of each letter and sentences
     IEnumerator Type()
     {
 
@@ -39,6 +44,7 @@ public class Dialogue : MonoBehaviour {
         }
 
     }
+    //
     public void NextSentence()
     {
 

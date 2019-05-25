@@ -4,10 +4,11 @@ using UnityEngine;
 
 //using statement for the use of ui
 using UnityEngine.UI;
+
 public class Silver_Scroll : MonoBehaviour {
 
 
-
+    //for the score object
     public Score scoreObject;
 
 
@@ -15,10 +16,6 @@ public class Silver_Scroll : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-
-        //Asking the program to then retrive the audio source file and apply it to Coin_Pickup
-
-
 
     }
 
@@ -42,12 +39,9 @@ public class Silver_Scroll : MonoBehaviour {
         {
 
 
-
             scoreObject.scoreValue += 50;
             // Destroy the gameObject that this script is attracted to
-            // (the coin) 
-
-
+            // (the scrolls) 
 
             Destroy(gameObject);
         }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//scene management 
 using UnityEngine.SceneManagement;
 
 public class HowToScript : MonoBehaviour {
@@ -9,7 +10,7 @@ public class HowToScript : MonoBehaviour {
     public void HowToPlay()
     {
 
-        //this will load the 1st level
+        //this will take the player to the how to play scene
         SceneManager.LoadScene("HowToPlay");
 
 

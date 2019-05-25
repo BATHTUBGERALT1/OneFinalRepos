@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerDeath : MonoBehaviour {
+
+
+    //player death 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Player playerScript = collision.collider.GetComponent<Player>();

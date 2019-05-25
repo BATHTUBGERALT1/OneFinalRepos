@@ -8,7 +8,7 @@ public class HowToBackButton : MonoBehaviour {
     public void BackButton()
     {
 
-        //this will load the 1st level
+        //this will load the main menu
         SceneManager.LoadScene("Main Menu");
      
 

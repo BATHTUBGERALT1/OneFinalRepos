@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//uses the unity engine
 using UnityEngine.UI;
+
 public class LifeScript : MonoBehaviour {
 
+    //this is for the number of lives
     public Text livesText;
     private int numericalLives = 0;
 
@@ -22,6 +25,7 @@ public class LifeScript : MonoBehaviour {
 
     }
 
+    //every time the played dies add one
     public void LoseLife()
     {
         numericalLives = numericalLives + 1;
@@ -30,6 +34,7 @@ public class LifeScript : MonoBehaviour {
 
     }
 
+    //this saves the lives
     public void SaveLives()
     {
 
@@ -37,6 +42,7 @@ public class LifeScript : MonoBehaviour {
 
     }
 
+    //game is over when its = to 0 
     public bool isGameOver()
     {
         if (numericalLives <= 0)

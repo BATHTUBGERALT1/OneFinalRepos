@@ -9,7 +9,7 @@ public class ContinueButton : MonoBehaviour {
     public void ContinueGame()
     {
 
-        //this will load the 1st level
+        //this will load the 2nd level
         SceneManager.LoadScene("Level 2");
         //reset the lives 
         PlayerPrefs.DeleteKey("lives");

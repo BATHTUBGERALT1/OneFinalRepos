@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Boulder_Script : MonoBehaviour {
+
+    //variables 
     private Vector3 StartingPosition;
 
     private Animator myAnimator; 
@@ -18,6 +20,7 @@ public class Boulder_Script : MonoBehaviour {
 	void Update () {
 		
 	}
+    //resets the position of the boulders with the animators facing both right and left
     public void ResetSelf()
     {
         myAnimator = GetComponent<Animator>();
