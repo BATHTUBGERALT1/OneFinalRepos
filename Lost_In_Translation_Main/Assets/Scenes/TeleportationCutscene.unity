@@ -750,8 +750,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -276.9, y: -147.00002}
-  m_SizeDelta: {x: 469.51, y: 37.49}
+  m_AnchoredPosition: {x: -233.33, y: -133.2}
+  m_SizeDelta: {x: 643.77, y: 92.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &292926860
 Animator:
@@ -803,7 +803,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'These pillars look Ancient!
+  m_Text: 'These pillars look Ancient
 
 '
 --- !u!222 &292926862
@@ -7982,7 +7982,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Meet the Scribe eriduto.. that name sounds important!
+  m_Text: Meet the Scribe eriduto.. that name sounds important
 --- !u!222 &1319331663
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8151,7 +8151,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: This has english on it.. what does it say?
+  m_Text: This has english on it.. what does it say
 --- !u!222 &1508605214
 CanvasRenderer:
   m_ObjectHideFlags: 0

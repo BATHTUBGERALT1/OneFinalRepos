@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Game Over.unity
     guid: 5aa46e45ab14c294cb0a1b4179fe03d4
   - enabled: 1
+    path: Assets/Scenes/Explanation.unity
+    guid: a3d4312e24fa3834992787838bbccddc
+  - enabled: 1
     path: Assets/Scenes/HighScore.unity
     guid: 358834f51f817c64cbe8b6175d344702
   - enabled: 1
